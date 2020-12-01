@@ -12,6 +12,14 @@ filteredDF = df[['County', 'Contest Name', 'Choice', 'Election Day',
 # Filter to presidential election
 presFilteredDF = filteredDF[filteredDF['Contest Name'] == 'US PRESIDENT']
 
+# Sort by county alpha
+presFilteredDF = presFilteredDF.sort_values('County')
 
-#Test Data output
-presFilteredDF.to_csv(r'../Data/testData.csv')
+# Group By Choice
+presFilteredDF = presFilteredDF.groupby(['County', 'Choice']).sum()
+
+# Data is now in the form
+
+# ------    -------    --------------      --------    ----------------    -----------     ------------
+# County    Choice      Election Day       One Stop    Absentee by Mail    Provisional     Total Votes
+# ------    -------    --------------      --------    ----------------    -----------     ------------
