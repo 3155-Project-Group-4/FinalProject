@@ -22,3 +22,4 @@ presFilteredDF = presFilteredDF.groupby(['County', 'Choice']).sum().reset_index(
 # ------    -------    --------------      --------    ----------------    -----------     ------------
 # County    Choice      Election Day       One Stop    Absentee by Mail    Provisional     Total Votes
 # ------    -------    --------------      --------    ----------------    -----------     ------------
+
