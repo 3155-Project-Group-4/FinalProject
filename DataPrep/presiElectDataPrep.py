@@ -1,6 +1,5 @@
 import pandas as pd
-import plotly.offline as pyo
-import plotly.graph_objects as go
+
 
 # Read in CSV of precinct data
 df = pd.read_csv('../Data/results_by_precinct.csv')
@@ -16,7 +15,7 @@ presFilteredDF = filteredDF[filteredDF['Contest Name'] == 'US PRESIDENT']
 presFilteredDF = presFilteredDF.sort_values('County')
 
 # Group By Choice
-presFilteredDF = presFilteredDF.groupby(['County', 'Choice']).sum()
+presFilteredDF = presFilteredDF.groupby(['County', 'Choice']).sum().reset_index()
 
 # Data is now in the form
 
