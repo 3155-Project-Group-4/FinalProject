@@ -21,7 +21,7 @@ import plotly.express as px
 
 countedOutDf = pd.read_csv('../Data/outByCounty.csv')
 
-figBarRegisteredVoters = px.bar(countedOutDf, x='county_desc', y='count')
+figBarRegisteredVoters = px.bar(countedOutDf, x='county_desc', y='count', labels = {'county_desc' : 'County', 'count' : 'Number Of Registered Voters'}, title = 'Number of Registered Voters by County in North Carolina')
 
-figBarRegisteredVoters.show()
+
 

@@ -10,6 +10,7 @@ import plotly.express as px
 import pandas as pd
 
 from Projections.countyCloro import figCholoro
+from Projections.countyVoterRegistration import figBarRegisteredVoters
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -62,6 +63,14 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     dcc.Graph(
         id='map-graph',
         figure=figCholoro
+    ),
+
+    html.H1(children='Vote Results by County in North Carolina',
+            style={'textAlign': 'center', 'color': colors['text']}),
+
+    dcc.Graph(
+        id='voters-in-each-county-barchart',
+        figure=figBarRegisteredVoters
     )
 ])
 
