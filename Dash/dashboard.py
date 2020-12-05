@@ -56,6 +56,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
     html.Hr(),
 
+
     html.H1(children='Vote Results by County in North Carolina',style={'textAlign': 'center', 'color': colors['text']}),
 
     dcc.Graph(
