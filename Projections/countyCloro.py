@@ -15,4 +15,5 @@ df = pd.read_csv('../DataPrep/presidentByCountyWin.csv')
 fig = px.choropleth(df, geojson=counties, color='candidate', locations='county', featureidkey='properties.CO_NAME', color_discrete_map={'Donald Trump':'red', 'Joe Biden':'blue'}, hover_data=['total_votes'])
 fig.update_geos(fitbounds='locations', visible=False)
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
+
+figCholoro = fig
