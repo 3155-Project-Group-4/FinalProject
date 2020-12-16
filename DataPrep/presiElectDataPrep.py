@@ -1,5 +1,5 @@
 import pandas as pd
-
+import plotly.express as px
 
 # Read in CSV of precinct data
 df = pd.read_csv('../Data/results_by_precinct.csv')
@@ -22,4 +22,6 @@ presFilteredDF = presFilteredDF.groupby(['County', 'Choice']).sum().reset_index(
 # ------    -------    --------------      --------    ----------------    -----------     ------------
 # County    Choice      Election Day       One Stop    Absentee by Mail    Provisional     Total Votes
 # ------    -------    --------------      --------    ----------------    -----------     ------------
+
+
 
