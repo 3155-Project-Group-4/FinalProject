@@ -52,7 +52,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     ''', style={'textAlign': 'center', 'color': colors['text']}),
 
 
-    html.H1(children='Vote Results by County in North Carolina',style={'textAlign': 'center', 'color': colors['text']}),
+    html.H1(children='2020 Presidential Election Vote Results by County in North Carolina',style={'textAlign': 'center', 'color': colors['text']}),
 
     dcc.Graph(
         id='map-graph',
@@ -62,7 +62,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     html.Hr(),
     html.Br(),
 
-    html.H1(children='Total Registered Votes by County',
+    html.H1(children='Total Registered Voters by County',
             style={'textAlign': 'center', 'color': colors['text']}),
 
     dcc.Graph(
@@ -72,7 +72,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
     html.Hr(),
 
-    html.H1(children='Total Votes Per Race by County',
+    html.H1(children='Total Votes Per Race',
             style={'textAlign': 'center', 'color': colors['text']}),
 
     dcc.Graph(
