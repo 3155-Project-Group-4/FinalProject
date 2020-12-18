@@ -12,6 +12,5 @@ filteredDF = filteredDF.loc[(filteredDF['Contest Name'] == 'US SENATE') | (filte
 
 filteredDF.to_csv('totalVotes.csv')
 
-fig = px.bar(filteredDF, x='Contest Name', y='Total Votes')
+figTotalVotesCounty = px.bar(filteredDF, x='Contest Name', y='Total Votes')
 
-fig.show()
