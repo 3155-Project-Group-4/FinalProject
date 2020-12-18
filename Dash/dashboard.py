@@ -8,6 +8,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
 import pandas as pd
+import heroku
 
 from Projections.countyCloro import figCholoro
 from Projections.countyVoterRegistration import figBarRegisteredVoters
@@ -16,6 +17,8 @@ from Projections.totalVoteBar import figTotalVotesCounty
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+server = app.server
 
 colors = {
     'background': '#111111',
@@ -78,6 +81,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         figure=figTotalVotesCounty
     )
 ])
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
